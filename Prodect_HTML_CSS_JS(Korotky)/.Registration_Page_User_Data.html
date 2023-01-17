@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background: #f1f2f3;
+            width: 99vw;
+        }
+        #userData{
+            position: relative;
+            margin: -12px auto 0 auto;
+            width: 60%;
+            font-size: 1.2em;
+        }
+        form{
+            background: white;
+            width: 100%;
+            padding: 30px 50px 50px 50px;
+            border-radius: 20px;
+        }
+        label{
+            position: relative;
+        }
+        input,select{
+            height: 32px;
+            width: 100%;
+            font-size: 0.9em;
+            padding-left: 10px;
+            margin-bottom: 20px;
+            outline: none;
+            border-radius: 10px;
+            border: 1px solid gray;
+        }
+        select{
+            font-size: 0.9em;
+        }
+        #saveSub{
+            width: 40%;
+            height: 40px;
+            font-size: 1.1em;
+            margin-top: 2%;
+            margin-left: 28.5%;
+            background: #0296ff;
+            color: white;
+            cursor: pointer;
+        }
+        h1{
+            text-align: center;
+            font-weight: normal;
+        }
+        .divForm{
+            width: 50%;
+            margin-right: 20px;
+        }
+        .fullForm{
+            display: flex;
+            justify-content: center;
+        }
+        .wrong{
+            position: absolute;
+            right: 0;
+            color: #be3d3d;
+            visibility: hidden;
+        }
+        @media (max-width: 1100px) {
+            .fullForm{
+                flex-wrap: wrap;
+            }
+            .divForm{
+                width: 100%;
+            }
+            #saveSub {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="userData">
+        <h1>User Information</h1>
+        <form method="GET" id="regForm" onsubmit= "return checkForm (event)">
+            <div class="fullForm">
+                <div class="divForm">
+                    <label>
+                        <span>Имя:</span><span class="wrong">Не верный формат имени</span><br>
+                        <input type="text" name="fName">
+                    </label><br>
+                    <label>
+                        <span>Год рождения:</span><span class="wrong">Не верный формат года</span><br>
+                        <input type="text">
+                    </label><br>
+                    <label>
+                        <span>Номер телефона:</span><span class="wrong">Не верный формат номера</span><br>
+                        <input type="text">
+                    </label>
+                </div>
+                <div class="divForm">
+                    <label>
+                        <span>Фамилия:</span><span class="wrong">Не верный формат фамилии</span><br>
+                        <input type="text" name="lName">
+                    </label><br>
+                    <label>
+                        <span>Пол:</span><span class="wrong"></span><br>
+                        <select>
+                            <option value="Male">Мужской</option>
+                            <option value="Female">Женский</option>
+                        </select>
+                    </label><br>
+                    <label>
+                        <span>Skype:</span><span class="wrong">Не верный login</span><br>
+                        <input type="text" name="skype">
+                    </label>
+                </div>
+            </div>
+            <label>
+                <input name="save" id="saveSub" type="submit" value="Save">
+            </label>
+        </form>
+    </div>
+    <script src="Js/jquery-3.6.2.min.js"></script>
+    <script src="Js/user_data_script.js"></script>
+</body>
+</html>

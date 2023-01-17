@@ -1,0 +1,1374 @@
+
+                            /*Основной блок*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+*{
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    margin: 0;
+    width: 98.9vw;
+    min-width: 340px;
+    z-index: -1;
+    background: #efefef;
+}
+
+                             /*Full Section*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+header,main{
+    position: relative;
+    width: 100%;
+}
+
+                             /*Header*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+header{
+    height: 90px;
+    background: #42654e;
+    width: 100%;
+    box-shadow: 0 5px 8px grey;
+}
+.menu,.sun,.registration{
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu{
+    left: 2%;
+}
+.sun{
+    right: 50%;
+}
+.menu img{
+    height: 60%;
+}
+.sun img{
+    height: 100%;
+}
+.menu img:hover{
+    border-radius: 10%;
+    background: #344d3b;
+}
+                             /*PopUp*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+.popUpWrapper{
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	transition: all 0.5s ease 0s;
+	z-index: 10;
+    display: none;
+}
+.popupInner{
+    width: 80%;
+    min-height: 60%;
+	max-width: 800px;
+	min-width: 420px;
+	background-color: #fff;
+    border-radius: 20px;
+	position: relative;
+	margin: 5% auto;
+	text-align: center;
+}
+.popUpP1{
+    margin-top: 70px;
+    font-size: 1em;
+    font-family: "comic sans ms", sans-serif;
+}
+.popUpP2{
+     margin-top: 100px;
+    font-size: 1.2em;
+    font-family: "courier new", sans-serif;
+}
+.popupInner img{
+    float: left;
+    margin: 20px 20px auto 20px;
+    width: 20%;
+}
+.popupClose{
+	display: inline-block;
+	border-radius: 50%;
+	border: 2px solid grey;
+	color: #000;
+	cursor: pointer;
+	opacity: .5;
+	font-size: 25px;
+	line-height: 27px;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	right: 16px;
+	top: 16px;
+	z-index: 99;
+	transition: .8s;
+}
+.popUpS1{
+    display: inline-block;
+    font-size: 1.4em;
+    margin: 0 auto 0 auto;
+    padding-right: 50px;
+    font-family: "comic sans ms", sans-serif;
+}
+.popupClose:hover {
+	opacity: 1.2;
+    transition: .8s;
+    transform: scale(1.2);
+}
+                             /*Navigation*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+nav{
+    background: #eab321;
+    position: absolute;
+    right: 0;
+    display: none;
+    max-height: 420px;
+    width: 280px;
+    height: 420px;
+    font-size: 1.3em;
+    font-family: "comic sans ms", sans-serif;
+    overflow: hidden;
+    box-shadow: -5px 5px 8px grey;
+    transition: max-width .5s,max-height .5s;
+}
+nav.active{
+    max-height: 57px;
+    max-width: 60px;
+    border-radius: 12px;
+    text-align: center;
+    background-image: url("../Img/icons/menuu.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: max-width .5s,max-height .5s;
+    z-index: 1;
+}
+nav ul{
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+nav li{
+    border-bottom: 2px solid black;
+    height: 60px;
+    transition: 0.5s;
+}
+nav li:hover{
+    transition: 0.5s;
+    background: #ab8403;
+    cursor: pointer;
+}
+nav a{
+    color: black;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+                             /*Main*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+main{
+    position: relative;
+    padding-top: 15px;
+    background: #efefef;
+    z-index: -2;
+}
+.text{
+    font-family: "corbel", sans-serif;
+    font-size: 1.4em;
+    line-height: 1.2;
+}
+.healthInfo,.familyInfo,.headerFamily,.dots,.headerSport,.hSport h2,.headerFood,.foodInfo,.calorieHeader,.nameTablePlace,.nameTable,.calorie,.headerRec,.webSite{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerFamily h3,.headerSport h3,.headerFood h3.calorieHeader h2,.headerRec h2{
+    margin: 12px 0 12px 0;
+}
+.headerFamily,.headerSport,.headerFood,.calorieHeader,.headerRec{
+    padding-left: 15px;
+    font-size: 1.5em;
+    justify-content: left;
+    background: #42654e;
+    font-family: "segoe print", monospace;
+    box-shadow: 0 5px 8px grey;
+}
+.text{
+    padding: 20px;
+    background: #FFFFFF;
+    border-radius: 23px;
+}
+.yourHard,.sportType,.calorieInfo,.textMotivation1,.textMotivation2{
+    padding: 20px;
+    border-radius: 15px;
+    background: white;
+}
+
+.familyWhat,.whatSport,.foodWhat{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 105px;
+    width: 35%;
+    font-size: 2.2em;
+    font-weight: bold;
+    padding-left: 35px;
+    border-left: 23px solid #737373;
+    font-family: monospace;
+}
+
+                             /*Section Health*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+.headerHealth{
+    font-family: "segoe print", monospace;
+    width: 40%;
+    margin: 0 41%;
+    line-height: 1.3;
+    color: #42654e;
+    font-size: 2.6em;
+    text-align: center;
+}
+.headerHealth img{
+    height: 75px;
+    width: 75px;
+    margin-right: 12px;
+}
+.healthInfo{
+    top: -10px;
+    width: 77%;
+    justify-content: space-between;
+}
+.healthTxt{
+    width: 55%;
+    min-width: 480px;
+    margin: 65px 25px 0 25px;
+}
+.beginImg{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 80px;
+    align-items: center;
+    top: 0.4%;
+    position: absolute;
+    width: 32%;
+}
+.beginImg:hover{
+    text-decoration: none;
+}
+.beginImg img{
+    width: 35%;
+}
+.beginImg span{
+    text-decoration: underline;
+    font-size: 2em;
+
+}
+.healthList p{
+    border-bottom: 3px solid;
+    font-size: 1.7em;
+}
+.healthWhat{
+    font-size: 1.9em;
+    text-align: center;
+}
+.healthList ul{
+    width: 100%;
+    min-width: 430px;
+    font-size: 1.6em;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+.healthList li{
+    margin-top: 8px;
+}
+
+                             /*Section Family*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+.family{
+    padding-top: 30px;
+    position: relative;
+}
+.headerFamily{
+    width: 55%;
+}
+.familyTree{
+    width: 63%;
+    margin-left: 30px;
+    margin-top: 40px;
+    border-radius: 15px;
+}
+.familyHappy{
+    margin-left: 70px;
+    margin-top: 40px;
+    border-radius: 15px;
+    width: 23%;
+}
+.familyWhat{
+    top: 1%;
+    right: 5%;
+}
+.familyInfo{
+    width: 95%;
+    flex-wrap: wrap;
+    margin: 0 auto 45px auto;
+}
+.familyInfo div{
+    width: 30%;
+    min-width: 320px;
+    min-height: 250px;
+    max-height: 350px;
+    height: 100%;
+    font-size: 1.5em;
+    margin-left: 30px;
+    margin-top: 30px;
+    border-radius: 15px;
+    background: #FFFFFF;
+    padding: 15px;
+}
+.familyInfo h4{
+    text-align: center;
+    margin: 0;
+}
+.familyInfo h4.active{
+    text-decoration: underline;
+    text-align: center;
+    margin: 0;
+}
+.familyInfo p{
+    margin-top: 20px;
+}
+
+
+
+                             /*Carousel*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+.hrGreen{
+    height: 3px;
+    background: #42654e;
+    border: none;
+}
+.owl-carousel{
+    margin-top: 75px;
+}
+.imgMine{
+    width: 80%;
+    margin: 25px auto 0 auto;
+}
+.owl-nav button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+}
+.owl-prev{
+    left: -11%;
+}
+.owl-next{
+    right: -11%;
+}
+.owl-nav button img{
+    height: 90px;
+    width: 90px;
+}
+.owl-dot{
+    height: 30px;
+    width: 30px;
+    margin-left: 27px;
+    border-radius: 50%;
+    border: none;
+    background-image: url("../Img/icons/noactive.png");
+    background-size: cover;
+}
+.owl-dot.active{
+    background-image: url("../Img/icons/active.png");
+}
+
+
+                             /*Section Sport*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+.sport{
+    margin-top: 10px;
+    position: relative;
+    min-height: 1020px;
+    padding-top: 30px;
+}
+.headerSport{
+    width: 45%;
+}
+.sportInfo{
+    width: 99%;
+    margin: 30px 0 0 15px;
+    display: flex;
+}
+.motivation{
+    width: 45%;
+    margin-right: 45px;
+    z-index: -1;
+
+}
+.sportChoose{
+    width: 53%;
+    min-width: 500px;
+    padding: 20px 20px 0 20px;
+    margin-right: 10px;
+}
+.yourHard{
+    width: 95%;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 23px 30px 0 30px;
+    font-family: "century gothic", sans-serif;
+}
+.sportType{
+    margin-top: 30px;
+    margin-left: 25px;
+    min-height: 890px;
+}
+.textMotivation1,.textMotivation2{
+    font-family: "lucida console", sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 30px 0 23px 45px;
+    width: 80%;
+}
+.textMotivation1{
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textMotivation2{
+    height: 280px;
+    width: 100%;
+    margin-left: 0;
+    font-weight: lighter;
+}
+.textMotivation2 img{
+    width: 20%;
+    position: relative;
+    top: -10px;
+}
+.hSport{
+    cursor: pointer;
+    width: 96%;
+    padding-bottom: 10px;
+    margin-left: 25px;
+    padding-top: 20px;
+}
+.hSport.active{
+    pointer-events: none;
+    user-select: none;
+    border-bottom: 2px solid black;
+}
+.hSport h2{
+    position: relative;
+    justify-content: left;
+    font-size: 1.9em;
+    font-family: "corbel", sans-serif;
+    color: #654c36;
+    margin: 0;
+}
+.hSport img{
+    height: 60px;
+    width: 60px;
+    margin-right: 150px;
+    margin-left: 5px;
+}
+.hSport span{
+    position: absolute;
+    right: 2%;
+}
+.textSport{
+    font-family: "century gothic", sans-serif;
+    display: none;
+    font-size: 1.5em;
+}
+.textSport p{
+    border: 2px solid black;
+    width: 96%;
+    padding: 20px;
+    margin-left: 25px;
+}
+.textSport.active{
+    display: initial;
+    margin: 0;
+    padding: 0;
+}
+.imgSportItem{
+    width: 100%;
+    max-height: 460px;
+    min-width: 540px;
+    margin-right: 30px;
+    margin-top: 15px;
+    display: none;
+    border-radius: 8px;
+}
+.ImgMotivation{
+    min-height: 480px;
+}
+.free{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: 60% 60%;
+    border-radius: 15px;
+}
+.imgSportItem.active{
+    display: initial;
+}
+
+                             /*Section Food*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+.food{
+    margin-top: 10px;
+    padding-top: 30px;
+    position: relative;
+    flex-flow: column;
+}
+.headerFood{
+    width: 50%;
+}
+.foodWhat{
+    right: 4%;
+    top: 1.5%;
+}
+.foodInfo{
+    position: relative;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 30px 30px 15px 0;
+}
+.foodImgMain{
+    width: 80%;
+}
+.foodImgMain img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.foodTxt{
+    margin-top: 53px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    width: 100%;
+}
+.foodTxt div{
+    margin-left: 40px;
+    max-height: 530px;
+    min-width: 230px;
+    border-radius: 15px;
+    background: #FFFFFF;
+}
+.foodTxt li{
+    margin-top: 8px;
+    padding-right: 10px;
+}
+.foodTxt h3{
+    text-align: center;
+}
+
+.principles h3{
+    color: #45c955;
+}
+.recomm h3{
+    color: #45c955;
+}
+.unRecomm h3{
+    color: #b44343;
+}
+
+                             /*Food calorie*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+.calorie{
+    width: 100%;
+    position: relative;
+    justify-content: left;
+}
+.calorieHeader{
+    position: relative;
+    top: -320px;
+    margin-right: 50px;
+    width: 17%;
+    min-width: 270px;
+    background: #eab321;
+}
+.calorieHeader h2{
+    font-size: 1.3em;
+    margin: 8px 0;
+}
+.calorieInfo{
+    margin: 30px 0;
+    width: 75%;
+    min-height: 870px;
+}
+.calorie hr{
+    height: 4px;
+    background: #eab321;
+    border: none;
+}
+.nameTablePlace{
+    width: 100%;
+    user-select: none;
+    margin-bottom: 30px;
+}
+.nameTable{
+    cursor: pointer;
+    font-family: "courier new", sans-serif;
+    width: 40%;
+    background: #eab321;
+    min-height: 60px;
+    height: 100%;
+    font-size: 1.5em;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-shadow: 0 5px 8px grey;
+}
+.nameTable:nth-child(2){
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.nameTable.active{
+    background: #b29343;
+    pointer-events: none;
+}
+.messageInfo{
+    font-size: 1.4em;
+    text-align: center;
+    font-family: "courier new", sans-serif;
+}
+.forTable{
+    width: 100%;
+    overflow: hidden;
+}
+table{
+    border: 1px solid grey;
+    border-collapse: collapse;
+    margin-top: 30px;
+    width: 100%;
+    min-height: 551px;
+}
+th,td{
+    font-size: 1.6em;
+    height: 50px;
+    border: 1px solid grey;
+    text-align: center;
+}
+                             /*section Recommendation*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+.receptBlock{
+    display: flex;
+}
+.searchRecept{
+    padding-top: 15px;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+.receptName{
+    margin: 0;
+}
+.receptName h2{
+    margin: auto auto 30px auto;
+    text-align: center;
+    width: 49%;
+    padding-bottom: 10px;
+    font-weight: lighter;
+    font-family: "courier new", sans-serif;
+    border-bottom: 5px solid grey;
+}
+.receptResult h2{
+    text-align: center;
+    font-family: "courier new", sans-serif;
+}
+.searchRecept label{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.searchRecept input{
+    width: 50%;
+    height: 40px;
+    outline: none;
+    border: 2px solid grey;
+    font-family: "courier new", sans-serif;
+    border-radius: 15px;
+    font-size: 1.3em;
+    padding-left: 15px;
+}
+.searchRecept button{
+    width: 10%;
+    background: #e0e0e0;
+    border: 2px solid grey;
+    border-radius: 15px;
+    font-size: 1.3em;
+    font-family: "courier new", sans-serif;
+    cursor: pointer;
+}
+.receptResult{
+    position: relative;
+    width: 35%;
+    min-height: 500px;
+    min-width: 300px;
+    border: 3px solid grey;
+    padding: 20px 20px 50px 20px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    margin: 0 30px;
+}
+.foodImg{
+    min-height: 300px;
+}
+.foodImg img{
+    margin-left: 4%;
+    width: 90%;
+}
+.spanFood{
+    display: inline-block;
+    font-family: "century gothic", sans-serif;
+    font-size: 1.3em;
+    margin-bottom: 8px;
+}
+.sourceLink{
+    position: absolute;
+    display: flex;
+    font-size: 1.8em;
+    color: #7a4040;
+    line-height: 0.9;
+    font-family: "gabriola", sans-serif;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    bottom: 1%;
+    left: 0;
+}
+.rightImg{
+    width: 10%;
+}
+                             /*section Recommendation*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+.recommendation{
+    padding-top: 30px;
+    margin-top: 10px;
+    position: relative;
+}
+.headerRec{
+    width: 40%;
+    padding-left: 60px;
+}
+.recTextMain{
+    width: 40%;
+    min-width: 313px;
+    font-size: 1.7em;
+    text-align: center;
+    font-family: "century gothic", sans-serif;
+    text-decoration: underline;
+    position: absolute;
+    right: 10%;
+    top: 0;
+}
+.webSite{
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+.webSite div{
+    font-size: 1em;
+    width: 28%;
+    height: 510px;
+    border: 1px dashed black;
+    padding: 15px;
+    text-align: center;
+    background: white;
+    overflow: hidden;
+}
+.webSite a{
+    text-decoration: none;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+.jivi a{
+    color: #c04343;
+}
+.salatShop a{
+    color: #1e1a48;
+}
+.takZdorovo a{
+    color: #e8b616;
+}
+.zozhnik a{
+    color: #9b7b46;
+}
+.myFitnesspal a{
+    color: #3a38a9;
+}
+.vitaPortal a{
+    color: #9a8484;
+}
+.webSite p{
+    font-size: 1.3em;
+    font-family: "century gothic", sans-serif;
+
+}
+.jivi img{
+    width: 50%;
+    border-radius: 8px;
+}
+.salatShop img{
+    width: 60%;
+    border-radius: 8px;
+}
+.zozhnik img{
+    width: 70%;
+    border-radius: 8px;
+}
+.takZdorovo img{
+    width: 100%;
+    border-radius: 8px;
+}
+.myFitnesspal img{
+    width: 90%;
+    border-radius: 8px;
+}
+.vitaPortal img{
+    width: 90%;
+    border-radius: 8px;
+}
+
+
+                             /*section Commentaries*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+.commentaries{
+    position: relative;
+    background: #ffffff;
+    width: 85%;
+    min-width: 655px;
+    margin: 50px auto;
+    padding: 30px 0;
+}
+main hr{
+    margin-top: 50px;
+    margin-bottom: 0;
+    border: none;
+    height: 4px;
+    background: #942f2f;
+}
+.mainPlace hr{
+    margin-top: 15px;
+    height: 3px;
+    width: 100.2%;
+    margin-left: -0.1%;
+    background: #c7bbbb;
+}
+.headerComm,.comeIn{
+    display: flex;
+    align-items: center;
+}
+.headerComm{
+    justify-content: space-between;
+}
+.commentZone{
+    background: white;
+    width: 70%;
+    margin: 0 auto 0 100px;
+    border-radius: 15px;
+}
+.placeInputComm img{
+    height: 60px;
+    border-radius: 30px;
+}
+.placeInputComm{
+    width: 90%;
+    margin-left: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 300px;
+    display: flex;
+}
+textarea{
+    font-size: 1.6em;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    margin-top: 20px;
+    height: 200px;
+}
+textarea::placeholder{
+    font-size: 1em;
+}
+.commInput{
+    border: 3px solid #c7bbbb;
+    border-radius: 15px;
+    margin-left: 20px;
+    width: 90%;
+}
+.spanComm1{
+    font-size: 1.4em;
+    font-weight: bolder;
+    font-family: "braggadocio", sans-serif;
+}
+.spanComm2{
+    font-size: 1em;
+    font-family: "braggadocio", sans-serif;
+    color: #4e4e50;
+    font-weight: bold;
+    cursor: pointer;
+}
+.spanComm2:hover{
+    color: #692020;
+}
+.commentSend{
+    font-size: 1.4em;
+    padding: 0 20px;
+    height: 40px;
+    border-radius: 30px;
+    float: right;
+    margin-right: 40px;
+    margin-top: 6px;
+    border: none;
+    color: white;
+    background: #8a2626;
+    pointer-events: none;
+    opacity: 0.33;
+}
+.commentSend.active{
+    cursor: pointer;
+    opacity: 1;
+    pointer-events: initial;
+}
+.mainPlace img{
+    height: 40px;
+    border-radius: unset;
+    margin-left: 15px;
+    margin-top: 3px;
+}
+.smile{
+    padding-top: 10px;
+}
+textarea:focus::-webkit-input-placeholder{
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+                             /*sendCommentaries*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+.sendComment{
+    display: flex;
+    margin-top: 20px;
+    padding-left: 80px;
+}
+.bodyComment{
+    width: 90%;
+}
+.bodyComment span{
+    display: block;
+}
+.commName{
+    color: #204d6e;
+    font-size: 1.2em;
+    font-family: "franklin gothic medium", sans-serif;
+}
+.commTime{
+    color: #777677;
+    margin-top: 2px;
+    font-size: 0.9em;
+    font-family: "consolas", sans-serif;
+}
+.commText{
+    margin-top: 6px;
+    line-height: 1.3;
+    font-size: 1em;
+    font-family: sans-serif;
+}
+.commLike{
+    cursor: pointer;
+    margin-top: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #dedcdc;
+    border-radius: 25px;
+    padding: 0 10px;
+    font-size: 20px;
+    font-family: "footlight mt light", sans-serif;
+    color: grey;
+    user-select: none;
+}
+.commLike img{
+    padding: 5px 0;
+    width: 20px;
+    margin-right: 5px;
+}
+.commentZone{
+    width: 85%;
+}
+.commAva{
+    display: inline;
+    width: 80px;
+    height: 80px;
+    background-image: url("../Img/ava/user.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+                             /*Footer*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+footer{
+    position: relative;
+    background: #204d6e;
+    overflow: hidden;
+    display: flex;
+}
+footer hr{
+    margin: 15px auto 20px auto;
+    width: 80%;
+    height: 2px;
+    background: black;
+}
+address,.mail,.socialMedia{
+    color: #ffe0e0;
+    font-size: 0.8em;
+    padding: 15px 10px;
+    width: 33%;
+    text-align: center;
+    height: 100%;
+}
+.addS2,.mailS1,.gitHub span{
+    text-decoration: underline;
+}
+.addS2:hover,.mailS1:hover,.gitHub span:hover{
+    text-decoration: none;
+}
+.addS1,.mailS,.socialMediaS{
+    font-size: 1.2em;
+    font-family: "cursive", sans-serif;
+}
+.addS4{
+    display: inline-block;
+    width: 60%;
+    margin-top: 10px;
+}
+.mailS2{
+    display: inline-block;
+    margin-top: 5px;
+}
+.phone{
+    font-size: 1em;
+    color: #ffe0e0;
+    width: 33%;
+    text-align: center;
+}
+.socialMedia{
+    width: 33%;
+}
+.social{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.messenger{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 150px;
+}
+.messenger div,.messenger a,.gitHub a,.git{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+.faceBook{
+   background-image: url("../Img/messenger/facebook.png");
+    background-size: cover;
+}
+.youTube{
+    background-image: url("../Img/messenger/youtube.png");
+    background-size: cover;
+}
+.instagram{
+    background-image: url("../Img/messenger/instagram.png");
+    background-size: cover;
+}
+.twitter{
+    background-image: url("../Img/messenger/twitter.png");
+    background-size: cover;
+}
+.vk{
+    background-image: url("../Img/messenger/vk.png");
+    background-size: cover;
+}
+.telegram{
+    background-image: url("../Img/messenger/telegram (2).png");
+    background-size: cover;
+}
+.watsUp{
+    background-image: url("../Img/messenger/whatsapp.png");
+    background-size: cover;
+}
+.faceBook:hover{
+    background-image: url("../Img/messenger/free-icon-facebook-3938034.png");
+}
+.youTube:hover{
+    background-image: url("../Img/messenger/free-icon-youtube-3938037.png");
+}
+.instagram:hover{
+    background-image: url("../Img/messenger/free-icon-instagram-3938051.png");
+}
+.twitter:hover{
+    background-image: url("../Img/messenger/free-icon-twitter-3938043.png");
+}
+.vk:hover{
+    background-image: url("../Img/messenger/free-icon-vk-3938083.png");
+}
+.telegram:hover{
+    background-image: url("../Img/messenger/telegram (1).png");
+}
+.watsUp:hover{
+    background-image: url("../Img/messenger/free-icon-whatsapp-3938058.png");
+}
+.gitHub{
+    display: block;
+    width: 200px;
+}
+.gitHub a{
+    color: whitesmoke;
+    font-size: 1.2em;
+    font-weight: lighter;
+    float: left;
+}
+.git{
+    background-image: url("../Img/messenger/github.png");
+    background-size: cover;
+}
+@media (max-width: 1450px) {
+    .sportType{
+        min-height: 905px;
+    }
+    .sportType img{
+        margin-right: 70px;
+    }
+}@media (max-width: 1400px) {
+    .sportType{
+        min-height: 920px;
+    }
+    .principles,.recomm,.unRecomm {
+        font-size: 0.9em;
+        margin-left: 0;
+    }
+}
+@media (max-width: 1320px) {
+    .sportType{
+        min-height: 940px;
+    }
+}
+@media (max-width: 1310px) {
+    .sportType{
+        min-height: 960px;
+    }
+}
+@media (max-width: 1300px) {
+    .sportType{
+        min-height: 980px;
+    }
+}
+@media (max-width: 1285px) {
+    .sportType{
+        min-height: 1020px;
+    }
+    .sportType img{
+        margin-right: 50px;
+    }
+}
+@media (max-width: 1210px) {
+    .webSite div{
+        font-size: 0.9em;
+        min-width: 255px;
+    }
+    .sportType{
+        min-height: 1040px;
+    }
+    .sportType img{
+        margin-right: 20px;
+    }
+    .comeIn img{
+        max-height: 40px;
+    }
+    .spanComm2{
+        font-size: 0.8em;
+    }
+    .comeIn{
+        max-width: 90px;
+    }
+}
+@media (max-width: 1150px) {
+    .sportType img{
+        margin-right: 20px;
+    }
+    .motivation{
+        margin: 0;
+    }
+    .sportChoose{
+        padding-left: 0;
+        margin: 0;
+    }
+    .sportChoose div{
+        padding-left: 0;
+        margin-left: 20px;
+    }
+    .imgSportItem{
+        margin-right: 10px;
+    }
+    .foodTxt div{
+        margin-left: 10px;
+    }
+    .calorie{
+        flex-wrap: wrap;
+    }
+    .calorieHeader{
+        top: 0;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .calorieInfo{
+        margin: auto;
+        width: 90%;
+    }
+    .receptBlock{
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 1025px) {
+    .webSite a{
+        font-size: 2em;
+    }
+    .comeIn{
+        flex-wrap: wrap;
+    }
+    .direction{
+        display: none;
+    }
+    .principles,.recomm,.unRecomm {
+        font-size: 0.8em;
+        margin-left: 0;
+    }
+    .comeIn{
+        margin-top: -31px;
+        min-width: 100px;
+    }
+}
+@media (max-width: 899px) {
+    .healthInfo{
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    .health,.healthInfo,.healthTxt,.beginImg{
+        width: 99%;
+    }
+    .healthList{
+        width: 90%;
+        margin: auto;
+    }
+    .healthList p{
+        width: 70%;
+        text-align: center;
+        margin: auto;
+    }
+    nav{
+        right: 3%;
+    }
+    .beginImg{
+        min-width: 400px;
+        position: static;
+    }
+    .headerHealth{
+        margin: 0;
+        width: 100%;
+    }
+    .familyHappy{
+        margin-left: 5px;
+    }
+    .sportInfo{
+        flex-wrap: wrap;
+    }
+    .motivation{
+        width: 90%;
+    }
+    .textMotivation2{
+        margin: 0;
+    }
+    .yourHard{
+        margin: 0;
+    }
+    .sportChoose{
+        width: 90%;
+    }
+    .direction{
+        display: initial;
+    }
+    .principles ul,.recomm ul,.unRecomm ul {
+        font-size: 0.8em;
+    }
+    .calorieInfo{
+        min-height: 890px;
+        min-width: 660px;
+    }
+    .webSite{
+        flex-wrap: wrap;
+    }
+    .sportType img{
+        margin-right: 70px;
+    }
+}
+@media (max-width: 772px){
+    .foodTxt{
+        flex-wrap: wrap;
+    }
+    .foodTxt div{
+        width: 90%;
+        margin-top: 30px;
+        font-size: 1.1em;
+    }
+    .webSite div{
+        width: 45%;
+    }
+    .headerRec{
+        width: 80%;
+        padding: 15px;
+    }
+    .recTextMain{
+        position: static;
+        width: 80%;
+    }
+    .comeIn{
+        position: static;
+    }
+}
+@media (max-width: 650px){
+    .direction{
+        display: none;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,33 @@
+                             /*Header*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+.personalData{
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.personalData{
+    right: 2%;
+    font-size: 18px;
+    color: #c5bcbc;
+}
+.personalData img{
+    height: 70px;
+    margin-right: 10px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    padding: 10px;
+}
+.personalData span:hover{
+    cursor: pointer;
+    color: white;
+}
+.dataUser{
+    text-align: center;
+}
+.nameUser{
+    color: #FFFFFF;
+    display: inline-block;
+    margin-bottom: 8px;
+}

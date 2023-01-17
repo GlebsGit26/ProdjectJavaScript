@@ -1,0 +1,40 @@
+
+                             /*Header*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+.registration{
+    right: 2%;
+    font-size: 18px;
+    color: #c5bcbc;
+}
+.registration img{
+    height: 80%;
+}
+.registration span:hover{
+    cursor: pointer;
+    color: white;
+}
+                             /*section Commentaries*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+.comeIn {
+    display: flex;
+    align-items: center;
+}
+.comeIn{
+    width: 12%;
+    position: absolute;
+    right: 1.5%;
+    top: 3%;
+    padding: 10px 0;
+    border-bottom: 5px solid #8a2626;
+    border-top: 5px solid #FFFFFF;
+    transition-duration: 1s;
+}
+.comeIn:hover{
+    transition-duration: 1s;
+    border-top: 5px solid #8a2626;
+    border-bottom: 5px solid #FFFFFF;
+}
+.comeIn img{
+    border-radius: unset;
+    height: 60px;
+}
